@@ -28,3 +28,7 @@
   width: 260px;
   justify-content: center;
 }
+
+.addButton:hover {
+  opacity: 0.5;
+}
