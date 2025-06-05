@@ -1,6 +1,6 @@
 import { FC, SyntheticEvent, useState } from 'react';
 import { RegisterUI } from '@ui-pages';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from '@store';
 import {
   getUserState,
   registerUser
@@ -13,7 +13,7 @@ export const Register: FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const errMessage = useSelector(getUserState).userRegisterError;

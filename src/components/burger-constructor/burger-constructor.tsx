@@ -1,7 +1,6 @@
 import { FC, useMemo } from 'react';
 import { TConstructorIngredient } from '@utils-types';
 import { BurgerConstructorUI } from '@ui';
-import { useDispatch, useSelector } from 'react-redux';
 import {
   getConstructorItems,
   resetConstructor
@@ -12,12 +11,12 @@ import {
   getOrderModalData,
   resetOrderModalData
 } from '../../services/slices/orders/orders';
-import { AppDispatch } from 'src/services/store';
+import { useDispatch, useSelector } from '@store';
 import { useNavigate } from 'react-router-dom';
 import { getUserState } from '../../services/slices/users';
 
 export const BurgerConstructor: FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   /** TODO(done): взять переменные constructorItems(done), orderRequest и orderModalData из стора */
   const constructorItems = useSelector(getConstructorItems);

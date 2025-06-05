@@ -3,9 +3,9 @@ import { Preloader } from '../ui/preloader';
 import { OrderInfoUI } from '../ui/order-info';
 import { TIngredient, TOrder, TOrdersData } from '@utils-types';
 import { getIngredients } from '../../services/slices/ingredients';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from '@store';
 import { useParams } from 'react-router-dom';
-import { AppDispatch, RootState } from 'src/services/store';
+import { AppDispatch, RootState } from '@store';
 import { getOrders } from '../../services/slices/orders';
 import { getFeed } from '../../services/slices/feed';
 import {
@@ -14,7 +14,7 @@ import {
 } from '../../services/slices/order/order-slice';
 
 export const OrderInfo: FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   const orders = useSelector(getOrders);
   const feed = useSelector(getFeed);
   const order = useSelector(getOrder);

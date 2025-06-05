@@ -36,10 +36,12 @@ export const createOrder = createAsyncThunk(
   }
 );
 
-export const fetchOrders = createAsyncThunk('order/fetchOrders', async () => {
-  const orders = await getOrdersApi();
-  return orders;
-});
+// export const fetchOrders = createAsyncThunk('order/fetchOrders', async () => {
+//   const orders = await getOrdersApi();
+//   return orders;
+// });
+
+export const fetchOrders = createAsyncThunk('order/fetchOrders', getOrdersApi);
 
 export const ordersSlice = createSlice({
   name: 'orders',

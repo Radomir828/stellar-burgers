@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { TOrder } from '@utils-types';
 import { FeedInfoUI } from '../ui/feed-info';
-import { useSelector } from 'react-redux';
+import { useSelector } from '@store';
 import { getFeed, getFeedOrders } from '../../services/slices/feed';
 import { fetchOrders, getOrders } from '../../services/slices/orders/orders';
 
@@ -17,7 +17,6 @@ export const FeedInfo: FC = () => {
   const orders: TOrder[] = useSelector(getFeedOrders);
   const feed = useSelector(getFeed);
   const readyOrders = getOrders_(orders, 'done');
-  // console.log(readyOrders);
 
   const pendingOrders = getOrders_(orders, 'pending');
 

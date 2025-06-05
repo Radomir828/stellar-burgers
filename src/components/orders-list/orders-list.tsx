@@ -2,7 +2,7 @@ import { FC, memo } from 'react';
 
 import { OrdersListProps } from './type';
 import { OrdersListUI, Preloader } from '@ui';
-import { useSelector } from 'react-redux';
+import { useSelector } from '@store';
 import { getOrderState } from '../../services/slices/orders';
 
 export const OrdersList: FC<OrdersListProps> = memo(({ orders }) => {

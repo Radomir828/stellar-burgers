@@ -15,10 +15,10 @@ import styles from './app.module.css';
 import { AppHeader, IngredientDetails, Modal, OrderInfo } from '@components';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { ProtectedRoute } from '../protected-route';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from '@store';
 import { useEffect } from 'react';
 import { fetchIngredients } from '../../services/slices/ingredients';
-import { AppDispatch } from 'src/services/store';
+import { AppDispatch } from '@store';
 import { fetchUser } from '../../services/slices/users';
 
 const App = () => {
