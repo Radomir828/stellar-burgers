@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "orders": [
+    {
+      "_id": "6846755bc2f30c001cb2afa5",
+      "ingredients": ["643d69a5c3f7b9001cfa093d", "643d69a5c3f7b9001cfa093d"],
+      "status": "done",
+      "name": "Флюоресцентный бургер",
+      "createdAt": "2025-06-09T05:47:07.270Z",
+      "updatedAt": "2025-06-09T05:47:08.040Z",
+      "number": 80635
+    },
+    {
+      "_id": "68467430c2f30c001cb2af9d",
+      "ingredients": ["643d69a5c3f7b9001cfa093d", "643d69a5c3f7b9001cfa093d"],
+      "status": "done",
+      "name": "Флюоресцентный бургер",
+      "createdAt": "2025-06-09T05:42:08.200Z",
+      "updatedAt": "2025-06-09T05:42:09.036Z",
+      "number": 80634
+    }
+  ],
+  "total": 80261,
+  "totalToday": 131
+}

@@ -23,10 +23,22 @@ const initialState: FeedState = {
   error: null
 };
 
-export const fetchFeed = createAsyncThunk('feed/fetchFeed', async () => {
-  const data = await getFeedsApi();
-  return data;
-});
+// export const fetchFeed = createAsyncThunk('feed/fetchFeed', async () => {
+//   const data = await getFeedsApi();
+//   return data;
+// });
+
+export const fetchFeed = createAsyncThunk<TOrdersData>(
+  'feed/fetchFeed',
+  async () => {
+    const response = await getFeedsApi(); // response: TFeedsResponse
+    return {
+      orders: response.orders,
+      total: response.total,
+      totalToday: response.totalToday
+    }; // возвращаем только нужную часть
+  }
+);
 
 export const feedSlice = createSlice({
   name: 'feed',
